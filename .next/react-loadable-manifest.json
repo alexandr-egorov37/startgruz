@@ -1,0 +1,62 @@
+{
+  "app\\form\\page.tsx -> ../../lib/telegram": {
+    "id": 3307,
+    "files": [
+      "static/chunks/584.5efbe347e2721f03.js"
+    ]
+  },
+  "components\\Calculator\\FurnitureAssembly.tsx -> ../../lib/notifications": {
+    "id": 6374,
+    "files": [
+      "static/chunks/374.369dbda71d583a78.js"
+    ]
+  },
+  "components\\Calculator\\FurnitureAssembly.tsx -> ../../lib/supabase": {
+    "id": 2141,
+    "files": []
+  },
+  "components\\Calculator\\Gasel.tsx -> ../../lib/notifications": {
+    "id": 6374,
+    "files": [
+      "static/chunks/374.369dbda71d583a78.js"
+    ]
+  },
+  "components\\Calculator\\Gasel.tsx -> ../../lib/supabase": {
+    "id": 2141,
+    "files": []
+  },
+  "components\\Calculator\\GaselIntercity.tsx -> ../../lib/notifications": {
+    "id": 6374,
+    "files": [
+      "static/chunks/374.369dbda71d583a78.js"
+    ]
+  },
+  "components\\Calculator\\GaselIntercity.tsx -> ../../lib/supabase": {
+    "id": 2141,
+    "files": []
+  },
+  "components\\Calculator\\Loaders.tsx -> ../../lib/notifications": {
+    "id": 6374,
+    "files": [
+      "static/chunks/374.369dbda71d583a78.js"
+    ]
+  },
+  "components\\Calculator\\MovingForm.tsx -> ../../lib/notifications": {
+    "id": 6374,
+    "files": [
+      "static/chunks/374.369dbda71d583a78.js"
+    ]
+  },
+  "components\\Calculator\\RiggingForm.tsx -> ../../lib/notifications": {
+    "id": 6374,
+    "files": [
+      "static/chunks/374.369dbda71d583a78.js"
+    ]
+  },
+  "components\\SearchingScreen.tsx -> ../lib/notifications": {
+    "id": 6374,
+    "files": [
+      "static/chunks/374.369dbda71d583a78.js"
+    ]
+  }
+}

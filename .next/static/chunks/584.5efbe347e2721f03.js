@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[584],{3307:function(n,e,u){u.d(e,{sendToTelegram:function(){return c}});async function c(n){return console.log("TG:",n),!0}}}]);

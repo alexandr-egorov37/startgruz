@@ -1,0 +1,1 @@
+"use strict";exports.id=912,exports.ids=[912],exports.modules={912:(e,s,o)=>{o.d(s,{sendToTelegram:()=>r});async function r(e){return console.log("TG:",e),!0}}};

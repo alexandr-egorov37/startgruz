@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 255 255 255;
+  --foreground: 0 0 0;
+  --card: 255 255 255;
+  --card-foreground: 0 0 0;
+  --popover: 255 255 255;
+  --popover-foreground: 0 0 0;
+  --primary: 0 0 0;
+  --primary-foreground: 255 255 255;
+  --secondary: 240 240 240;
+  --secondary-foreground: 0 0 0;
+  --muted: 240 240 240;
+  --muted-foreground: 120 120 120;
+  --accent: 240 240 240;
+  --accent-foreground: 0 0 0;
+  --destructive: 255 0 0;
+  --destructive-foreground: 255 255 255;
+  --border: 230 230 230;
+  --input: 230 230 230;
+  --ring: 180 180 180;
+  --radius: 0.625rem;
+}
+
+.dark {
+  --background: 0 0 0;
+  --foreground: 255 255 255;
+  --card: 15 23 42;
+  --card-foreground: 255 255 255;
+  --popover: 2 6 23;
+  --popover-foreground: 255 255 255;
+  --primary: 255 255 255;
+  --primary-foreground: 15 23 42;
+  --secondary: 30 41 59;
+  --secondary-foreground: 255 255 255;
+  --muted: 30 41 59;
+  --muted-foreground: 148 163 184;
+  --accent: 30 41 59;
+  --accent-foreground: 255 255 255;
+  --destructive: 153 27 27;
+  --destructive-foreground: 255 255 255;
+  --border: 30 41 59;
+  --input: 30 41 59;
+  --ring: 71 85 105;
+}
+
+@layer base {
+  body {
+    background: rgb(var(--background));
+    color: rgb(var(--foreground));
+  }
+
+  /* Mobile: remove 300ms tap delay on all interactive elements */
+  button,
+  a,
+  label,
+  input,
+  textarea,
+  select,
+  [role="button"] {
+    touch-action: manipulation;
+  }
+
+  /* Ensure buttons always have a minimum tap target on mobile */
+  button, [role="button"] {
+    cursor: pointer;
+  }
+
+  /* modal-open: lock scroll but keep pointer-events intact */
+  body.modal-open {
+    overflow: hidden;
+    /* Do NOT add pointer-events: none here — that would block modal buttons */
+  }
+}
+
+@keyframes scan {
+    0% { top: 0%; opacity: 0; }
+    50% { opacity: 1; }
+    100% { top: 100%; opacity: 0; }
+}
+
+.animate-scan {
+    animation: scan 3s linear infinite;
+}
+
+@keyframes sweep {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.animate-sweep {
+    animation: sweep 3s linear infinite;
+}

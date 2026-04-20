@@ -1,0 +1,20 @@
+{
+  "/_not-found/page": "app/_not-found/page.js",
+  "/admin/login/page": "app/admin/login/page.js",
+  "/admin/executor/page": "app/admin/executor/page.js",
+  "/admin/review-deletion-requests/page": "app/admin/review-deletion-requests/page.js",
+  "/auth/page": "app/auth/page.js",
+  "/admin/page": "app/admin/page.js",
+  "/customer/masters/page": "app/customer/masters/page.js",
+  "/customer/master/page": "app/customer/master/page.js",
+  "/customer/page": "app/customer/page.js",
+  "/executor/page": "app/executor/page.js",
+  "/offer/page": "app/offer/page.js",
+  "/dashboard/page": "app/dashboard/page.js",
+  "/performer/auth/page": "app/performer/auth/page.js",
+  "/form/page": "app/form/page.js",
+  "/page": "app/page.js",
+  "/select-role/page": "app/select-role/page.js",
+  "/results/page": "app/results/page.js",
+  "/performer/dashboard/page": "app/performer/dashboard/page.js"
+}
