@@ -31,10 +31,10 @@ jobs:
           test -d out || (echo "out folder missing" && exit 1)
 
       - name: Install AWS CLI
-        run: |
-          curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
-          unzip -q awscliv2.zip
-          sudo ./aws/install
+  run: |
+    curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+    unzip -q awscliv2.zip
+    sudo ./aws/install --update
 
       - run: |
           aws s3 sync ./out s3://$BUCKET_NAME \
