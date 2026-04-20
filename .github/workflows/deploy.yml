@@ -1,0 +1,51 @@
+name: Auto Deploy to Yandex Storage
+
+"on":
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.YC_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.YC_SECRET_ACCESS_KEY }}
+      AWS_DEFAULT_REGION: ${{ secrets.YC_REGION }}
+      BUCKET_NAME: ${{ secrets.YC_BUCKET }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Check out folder
+        run: |
+          test -d out || (echo "Folder 'out' not found after build" && exit 1)
+
+      - name: Install AWS CLI
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y awscli
+
+      - name: Upload to Yandex Object Storage
+        run: |
+          aws s3 sync ./out s3://$BUCKET_NAME \
+            --endpoint-url https://storage.yandexcloud.net \
+            --delete
+
+      - name: Done
+        run: echo "Deploy finished successfully"
